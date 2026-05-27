@@ -1,0 +1,3 @@
+/home/user/t9/build/CMakeFiles/nokia2780_t9_engine.dir
+/home/user/t9/build/CMakeFiles/edit_cache.dir
+/home/user/t9/build/CMakeFiles/rebuild_cache.dir

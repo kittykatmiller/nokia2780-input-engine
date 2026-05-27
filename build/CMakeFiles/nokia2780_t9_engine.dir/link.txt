@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/nokia2780_t9_engine.dir/link.d CMakeFiles/nokia2780_t9_engine.dir/src/main.cpp.o CMakeFiles/nokia2780_t9_engine.dir/src/MouseMode.cpp.o CMakeFiles/nokia2780_t9_engine.dir/src/Volume.cpp.o CMakeFiles/nokia2780_t9_engine.dir/src/Backlight.cpp.o -o nokia2780_t9_engine  -levdev
