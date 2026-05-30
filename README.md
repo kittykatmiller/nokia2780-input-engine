@@ -73,6 +73,6 @@ Thank you for checking out my project !! :3
 * before installing (or maybe it has to be after im not quite sure i only tested this after installing) run
   `pmbootstrap kconfig edit linux-postmarketos-qcom-msm89x7` and include the driver `Stironix ST7789V` found under `Device Drivers -> Graphics Support -> Direct Rendering Manager -> Display Panels -> Sitronix ST7789V panel` This enables the display panel driver and allows graphics to be rendered, instead of just leaving you on a blank screen
 
-* If left at a blank screen (or frozen "powered by KaiOS" screen) run, while connected to a pc by a data cable, `telnet 172.16.42.1` then copy the `pmos_root_uuid` (or smth like that, cant remember off the top of my head) and reinsert sd and run `sudo tune2fs -U <UUID> /dev/<SDCARD>` to change your SD card's UUID to match the boot.img's expected rootfs UUID
+* If left at a blank screen (or frozen "powered by KaiOS" screen) run, while connected to a pc by a data cable, `telnet 172.16.42.1` then copy the `pmos_root_uuid` (or smth like that, cant remember off the top of my head) found by running `cat /proc/cmdline` and reinsert sd (in pc) and run `sudo tune2fs -U <UUID> /dev/<SDCARD>` to change your SD card's UUID to match the boot.img's expected rootfs UUID
 
 Yor'eu welcum :3
