@@ -10,6 +10,7 @@ This program is held together by elmers glue, hopes, and dreams so please don't 
 but hey, i turned that stupid "SOS" button that KEEPS LOCKING ME OUT OF VIEWING MESSAGES WHILE IM ON CALL (in KaiOS—i dual booted >:3 ) into a pretty cool flashlight button ^^
 
 ## Planned features:
+* Capital letter support 😭
 * Haptic feedback when certain controls are enabled
 * Stability :p
 * Allowing you to click enter to select a letter before timer expires
