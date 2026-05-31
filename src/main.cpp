@@ -17,7 +17,7 @@ using namespace std;
 using namespace std::chrono;
 
 map<int, string> keys = {
-	{KEY_1, "1`:\"!?/\\\\.,+-=_@$%^&;'<>(){}[]"},
+	{KEY_1, "1`:\"!?/\\.,+-=_@$%^&;'<>(){}[]"},
 	{KEY_2, "abc2"},
 	{KEY_3, "def3"},
 	{KEY_4, "ghi4"},
@@ -26,6 +26,21 @@ map<int, string> keys = {
 	{KEY_7, "pqrs7"},
 	{KEY_8, "tuv8"},
 	{KEY_9, "wxyz9"},
+	{KEY_NUMERIC_STAR, "*"},
+	{KEY_0, " 0"},
+	{KEY_NUMERIC_POUND, "#"},
+};
+
+map<int, string> keysCap = {
+	{KEY_1, "1`:\"!?/\\.,+-=_@$%^&;'<>(){}[]"},
+	{KEY_2, "ABC2"},
+	{KEY_3, "DEF3"},
+	{KEY_4, "GHI4"},
+	{KEY_5, "JKL5"},
+	{KEY_6, "MNO6"},
+	{KEY_7, "PQRS7"},
+	{KEY_8, "TUV8"},
+	{KEY_9, "WXYZ9"},
 	{KEY_NUMERIC_STAR, "*"},
 	{KEY_0, " 0"},
 	{KEY_NUMERIC_POUND, "#"},
@@ -59,6 +74,7 @@ int main() {
 	bool replacing = false;
 	bool grabbed = true;
 	bool mouseMode = false;
+	bool capsLock = false;
 
 	auto last_press = steady_clock::now();
 
@@ -90,7 +106,15 @@ int main() {
 					index = 0;
 				}
 
-				string chars = keys[ev.code];
+				string chars;
+				if (capsLock)
+				{
+					chars = keysCap[ev.code];
+				}
+				else
+				{
+					chars = keys[ev.code];
+				}
 
 				char out = chars[index % chars.size()];
 
@@ -119,6 +143,9 @@ int main() {
 					continue;
 				} else if (ev.code == KEY_KBD_LCD_MENU2 && ev.value == 1) {
 					system("DISPLAY=:0 ratpoison -c next");
+					continue;
+				} else if (ev.code == KEY_KBD_LCD_MENU1 && ev.value == 1) {
+					capsLock = !capsLock;
 					continue;
 				} else if (ev.code == KEY_MENU) {
 					static auto timeHeld = steady_clock::time_point();
