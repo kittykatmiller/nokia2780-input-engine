@@ -10,7 +10,7 @@ This program is held together by elmers glue, hopes, and dreams so please don't 
 but hey, i turned that stupid "SOS" button that KEEPS LOCKING ME OUT OF VIEWING MESSAGES WHILE IM ON CALL (in KaiOS—i dual booted >:3 ) into a pretty cool flashlight button ^^
 
 ## Planned features:
-* Capital letter support 😭
+* ~~Capital letter support 😭~~ ☑️
 * Haptic feedback when certain controls are enabled
 * Stability :p
 * Allowing you to click enter to select a letter before timer expires
@@ -27,7 +27,7 @@ OK button = Enter/Return
 
 D-Pad (left, right, up, down) = normal usage as up, down, left, right arrow keys on keyboard
 
-Left softkey button (little dash at top of kbd) - nothing :3
+Left softkey button (little dash at top of kbd) - Toggle caps lock
 
 Right softkey button - switch windows (only works with ratpoison)
 
